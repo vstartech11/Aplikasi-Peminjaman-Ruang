@@ -8,7 +8,14 @@
  * @author USER
  */
 public class LoginLogic {
-    private int nim = LoginForm.get_nim_field();
-    private String password = LoginForm.get_pass_field();
+    private String nim ;
+    private String password ;
+    public LoginLogic(String nim,String password){
+        this.nim = nim;
+        this.password= password;
     
+    }
+    public static void main(String[] args) {
+        LoginLogic login = new LoginLogic(LoginForm.get_nim_field(),LoginForm.get_pass_field());
+    }
 }

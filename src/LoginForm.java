@@ -8,13 +8,11 @@
  * @author USER
  */
 public class LoginForm extends javax.swing.JFrame {
-    static char[] password ;
 
     /**
      * Creates new form LoginForm
      */
     public LoginForm() {
-        password = pass_field.getPassword();
         initComponents();
     }
 
@@ -28,18 +26,30 @@ public class LoginForm extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
+        jDialog1 = new javax.swing.JDialog();
         jPanel2 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         nim_field = new javax.swing.JTextField();
-        btn_login = new javax.swing.JButton();
+        btn_register = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         pass_field = new javax.swing.JPasswordField();
-        btn_login1 = new javax.swing.JButton();
+        btn_login = new javax.swing.JButton();
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asset/profil-kampus-itk-kalimantan.jpg"))); // NOI18N
+
+        javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
+        jDialog1.getContentPane().setLayout(jDialog1Layout);
+        jDialog1Layout.setHorizontalGroup(
+            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jDialog1Layout.setVerticalGroup(
+            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -49,7 +59,7 @@ public class LoginForm extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(null);
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setBackground(new java.awt.Color(204, 204, 204));
         jPanel2.setPreferredSize(new java.awt.Dimension(1080, 720));
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
@@ -63,12 +73,12 @@ public class LoginForm extends javax.swing.JFrame {
             }
         });
 
-        btn_login.setBackground(new java.awt.Color(153, 153, 153));
-        btn_login.setForeground(new java.awt.Color(25, 44, 42));
-        btn_login.setText("Register");
-        btn_login.addActionListener(new java.awt.event.ActionListener() {
+        btn_register.setBackground(new java.awt.Color(153, 153, 153));
+        btn_register.setForeground(new java.awt.Color(25, 44, 42));
+        btn_register.setText("Register");
+        btn_register.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_loginActionPerformed(evt);
+                btn_registerActionPerformed(evt);
             }
         });
 
@@ -85,12 +95,12 @@ public class LoginForm extends javax.swing.JFrame {
             }
         });
 
-        btn_login1.setBackground(new java.awt.Color(153, 153, 153));
-        btn_login1.setForeground(new java.awt.Color(25, 44, 42));
-        btn_login1.setText("Login");
-        btn_login1.addActionListener(new java.awt.event.ActionListener() {
+        btn_login.setBackground(new java.awt.Color(153, 153, 153));
+        btn_login.setForeground(new java.awt.Color(25, 44, 42));
+        btn_login.setText("Login");
+        btn_login.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_login1ActionPerformed(evt);
+                btn_loginActionPerformed(evt);
             }
         });
 
@@ -117,9 +127,9 @@ public class LoginForm extends javax.swing.JFrame {
                 .addGap(56, 56, 56)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(btn_login1)
+                        .addComponent(btn_login)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btn_login))
+                        .addComponent(btn_register))
                     .addComponent(pass_field, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
         jPanel1Layout.setVerticalGroup(
@@ -139,8 +149,8 @@ public class LoginForm extends javax.swing.JFrame {
                 .addComponent(pass_field, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn_login)
-                    .addComponent(btn_login1))
+                    .addComponent(btn_register)
+                    .addComponent(btn_login))
                 .addContainerGap(30, Short.MAX_VALUE))
         );
 
@@ -173,19 +183,26 @@ public class LoginForm extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_pass_fieldActionPerformed
 
-    private void btn_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_loginActionPerformed
+    private void btn_registerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_registerActionPerformed
         // TODO add your handling code here:
-
-    }//GEN-LAST:event_btn_loginActionPerformed
+    }//GEN-LAST:event_btn_registerActionPerformed
 
     private void nim_fieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nim_fieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_nim_fieldActionPerformed
 
-    private void btn_login1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_login1ActionPerformed
+    private void btn_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_loginActionPerformed
         // TODO add your handling code here:
-        
-    }//GEN-LAST:event_btn_login1ActionPerformed
+        String nim = nim_field.getText();
+        String password = String.valueOf(pass_field.getPassword());
+        if (nim.equals("admin")&&password.equals("admin")){
+            MainForm main = new MainForm();
+            main.setVisible(true);
+            this.setVisible(false);
+        }else{
+            System.out.println("username dan password salah");
+        }
+    }//GEN-LAST:event_btn_loginActionPerformed
 
     /**
      * @param args the command line arguments
@@ -218,14 +235,14 @@ public class LoginForm extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new LoginForm().setVisible(true);
-
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_login;
-    private javax.swing.JButton btn_login1;
+    private javax.swing.JButton btn_register;
+    private javax.swing.JDialog jDialog1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
@@ -233,13 +250,13 @@ public class LoginForm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private static javax.swing.JTextField nim_field;
-    private static javax.swing.JPasswordField pass_field;
+    private javax.swing.JTextField nim_field;
+    private javax.swing.JPasswordField pass_field;
     // End of variables declaration//GEN-END:variables
-    public static int get_nim_field(){
-        return Integer.parseInt(nim_field.getText());
-    }
-    public static String get_pass_field(){
-        return String.copyValueOf(password);
-    }
+    // public static String get_nim_field(){
+    //     return nim_field.getText();
+    // }
+    // public static String get_pass_field(){
+    //     return pass_field.getSelectedText();
+    // }
 }
